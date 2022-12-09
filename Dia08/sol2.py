@@ -5,7 +5,6 @@ top_scenic_value = 0
 # I will ignore border trees as they have a sceniic value of 0
 for i in range(1,len(trees)-1):
     for j in range(1,len(trees[i])-1):
-        
         tree_val = trees[i][j]
         left_dist = 0
         right_dist = 0
