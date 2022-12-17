@@ -1,4 +1,7 @@
 import re
+import time
+
+a = time.time_ns()
 f = open("input.txt")
 
 lines = [re.findall("(?:[xy]=)([\d-]*)",i) for i in f.readlines()]
@@ -37,10 +40,12 @@ for y in range(0,4000001):
                     intersected_ranges[indx] = True
             occupied_ranges = [occupied_ranges[i] for i in range(len(occupied_ranges)) if not intersected_ranges[i]]
             occupied_ranges.append(occ_range)     
-    if y%10000 == 0:
-        print(y)
-        print(occupied_ranges)
+    # if y%10000 == 0:
+    #     print(y)
+    #     print(occupied_ranges)
     if occupied_ranges[0][0] > 0 or occupied_ranges[0][1] < 4000000:
         # Last achieved x= 3337614 y = 2933732
         print(occupied_ranges, y)
         break
+
+print(time.time_ns()-a)
