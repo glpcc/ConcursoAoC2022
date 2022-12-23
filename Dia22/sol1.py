@@ -47,7 +47,7 @@ directions = [
     (-1,0),
     (0,-1)
 ]
-print(len(vertical_delimitions))
+print(len(horizontal_delimitions))
 def calculate_following_pos(curent_pos,dir):
     # print(current_pos,current_dir)
     new_pos = [curent_pos[0]+directions[dir][0],curent_pos[1]+directions[dir][1]]
@@ -79,3 +79,4 @@ for i in instrucctions:
                 # print(current_pos)
 
 print(current_pos,current_dir)
+print(current_pos[1]*1000 + current_pos[0]*4 + current_dir)
