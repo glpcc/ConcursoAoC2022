@@ -5,7 +5,7 @@ c = time.time_ns()
 f = open("input.txt")
 
 # dict with monkey: monkey_value or tuple with left_mokey,right_mokey,op
-tree: dict[str,tuple[str,str,str]|int] = dict()
+tree = dict()
 
 for i in f.readlines():
     line = i.strip()
